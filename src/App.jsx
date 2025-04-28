@@ -1,18 +1,12 @@
-import Hello from "./components/Hello";
+import { useState } from "react";
 
-const Card = ({title, rating}) => {
+const Card = ({title}) => {
+  const [hasLiked, setHasLiked] = useState('❤️');
+
   return (
-    <div className="card" style = {{
-      border: '1px solid #4b5362',
-      padding: '20px',
-      margin: '10px',
-      backgroundColor: '#31363f',
-      borderRadius: '10px',
-      minHeight: '100px'
-    }}>
+    <div className="card" >
       <h2>{title}</h2>
-      <p>{rating}</p>
-      <br />
+      <button onClick={() => setHasLiked( hasLiked === '❤️'? '🤍':'❤️')}>{hasLiked}</button>
     </div>
   );
 }
