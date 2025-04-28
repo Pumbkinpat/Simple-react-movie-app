@@ -1,12 +1,22 @@
-# React + Vite
+# Movie App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Hero Image](public/hero.png)
 
-Currently, two official plugins are available:
+This is a simple movie app built with **React.js** and **Vite**. The app integrates the **TMDB API** to fetch movie data and uses **Appwrite** for backend and database functionalities.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **View Popular Movies**: Displays a list of currently popular movies.
+- **Search for Movies**: Allows users to search for movies by name.
+- **Trending Suggestions**: Suggests the most trending movies based on user search activity.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- **Frontend**: React.js with Vite for fast development and build.
+- **Styling**: Tailwind CSS for modern and responsive design.
+- **Backend**: Appwrite for managing the database and backend logic.
+- **API**: TMDB API for fetching movie data.
+
+## Project Structure
+
+The project structure is straightforward and organized for scalability:
