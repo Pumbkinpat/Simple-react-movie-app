@@ -1,12 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Card = ({title}) => {
-  const [hasLiked, setHasLiked] = useState('❤️');
+  const [hasLiked, setHasLiked] = useState(false);
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    console.log(`${title} has been liked: ${hasLiked}!`);
+  }, [hasLiked]);
+
+  useEffect(() => {
+    console.log('CARD REDEREN');
+  }, []);
 
   return (
-    <div className="card" >
+    <div className="card" onClick={() => {setCount(count => count + 1)}} >
       <h2>{title}</h2>
-      <button onClick={() => setHasLiked( hasLiked === '❤️'? '🤍':'❤️')}>{hasLiked}</button>
+      <p>{count}</p>
+      <button onClick={() => setHasLiked(!hasLiked)}>{hasLiked? '🤍':'❤️'}</button>
     </div>
   );
 }
